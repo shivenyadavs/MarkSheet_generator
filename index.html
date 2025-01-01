@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Sheet Generator</title>
+    <script src="markscript.js" defer></script>
+    <style>
+        body {
+            text-align: center;
+            background-color: lightgray;
+        }
+
+        #USN,#csfpc,#cs1100,#cs1201,#cs1801,#cs1306{
+           width: 300px;
+           padding: 3pt;
+        }
+        h1{
+            text-align: center;
+        }
+        #form1{
+            text-align: center;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 10px;
+            background-color: white;
+
+        }
+        form{
+            display:inline-block;
+            text-align: left;
+            padding: 5pt;
+            
+        }
+        #btn{
+            text-align: center;
+            width: 313px;
+            background-color: green;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            margin: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>MARK SHEET GENERATOR</h1>
+<div id="form1">
+    <form action="#" method="get">
+        <label for="USN">USN:</label><br>
+        <input type="number" id="USN" required><br>
+        <label for="csfpc">CS1000-Fundamentals of programming in c</label><br>
+        <input type="number" id="csfpc" required><br>
+        <label for="cs1100">CS1100-digital systems</label><br>
+        <input type="number" id="cs1100" required><br>
+        <label for="cs1201">CS1201-Data analysis with python</label><br>
+        <input type="number" id="cs1201" required><br>
+        <label for="cs1801">CS1801-Introduction to maths for cs theory</label><br>
+        <input type="number" id="cs1801" required><br>
+        <label for="cs1306">CS1306-Introduction To web design</label><br>
+        <input type="number" id="cs1306" required><br>
+        <button id="btn"  onclick="generateMarkSheet()">Generate Mark Sheet</button>
+    </form>
+</div>
+<div id="markSheet"></div>
+</body>
+</html>
